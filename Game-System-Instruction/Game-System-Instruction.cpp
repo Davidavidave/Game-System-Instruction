@@ -5,9 +5,9 @@
 using namespace std;
 
 int main() {
-    int dambo_health = 80;
-    int manag_health = 75;
-    int gulapa_health = 60;
+    int dambo_health = 75;
+    int manag_health = 70;
+    int gulapa_health = 100;
     int health = 100;
     const int super_damage = 15;
     const int mid_damage = 10;
@@ -36,17 +36,22 @@ int main() {
             health -= low_damage;
             dambo_health -= player_damage;
 
+            cout << "Monster's health is: " << dambo_health;
+
             break;
         case 2:
             cout << "Manang attacks you\n";
-            health -= mid_damage;
+            health += mid_damage;
             manag_health -= player_damage;
 
+            cout << "Monster's health is: " << manag_health;
             break;
         case 3:
             cout << "Gulapa attacks you\n";
             health -= super_damage;
             gulapa_health -= player_damage;
+
+            cout << "Monster's health is: " << gulapa_health;
             break;
         }
 
